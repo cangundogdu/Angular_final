@@ -1,0 +1,70 @@
+
+
+<div class="lgn">
+    <h1>Log In</h1>
+    </div>
+      
+    
+    <form [formGroup]="form" (ngSubmit)="losubmit()">
+    
+          
+    
+        <div class="form-group">
+    
+            <label for="loginName" style='font-size: 24px;'>Login Name</label> 
+     
+            <input 
+    
+                formControlName="loginName"
+    
+                id="loginName" 
+    
+    
+                type="text"
+    
+                style='font-size: 24px;'
+                
+                text-align = "left"
+    
+                class="form-control">
+
+               
+        </div>
+    
+        <br>                    
+    
+        <div class="form-group">
+    
+            <label for="password" style='font-size: 24px;' >Password</label>
+    
+            <input 
+    
+                formControlName="password"
+    
+                id="password" 
+    
+                type="text" 
+    
+                class="form-control">
+    
+            <!--div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+    
+                <div *ngIf="f.email.errors.required">Email is required.</div>
+    
+                <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+    
+            </div-->
+    
+        </div>
+    
+        <br>
+        
+    
+      
+    
+        <div class="submitCl">
+        <button (click)="losubmit()"  [disabled]="!form.valid" style='font-size: 24px;'>Submit</button> 
+        
+    
+    </div>
+    </form>

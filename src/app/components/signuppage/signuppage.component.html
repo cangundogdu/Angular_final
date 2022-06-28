@@ -1,0 +1,100 @@
+
+
+<div class="sgn">
+    <h1>Sign up</h1>
+    </div>
+      
+    
+    <form [formGroup]="form" (ngSubmit)="susubmit()">
+    
+          
+    
+        <div class="form-group">
+    
+            <label for="signupName" style='font-size: 24px;'>Login Name</label>
+    
+            <input 
+    
+                formControlName="signupName"
+    
+                id="signupName" 
+    
+    
+                type="text"
+    
+                style='font-size: 24px;'
+                
+                text-align = "left"
+    
+                class="form-control">
+    
+            <!--div *ngIf="Firstname.touched && f.name.invalid" class="alert alert-danger">
+    
+                <div *ngIf="f.Firstname.errors.required">Name is required.</div>
+    
+                <div *ngIf="f.name.errors.minlength">Name should be 3 character.</div>
+    
+            </div-->
+    
+        </div>
+    
+        <br>                    
+    
+        <div class="form-group">
+    
+            <label for="signuppassword" style='font-size: 24px;' >Password</label>
+    
+            <input 
+    
+                formControlName="signuppassword"
+    
+                id="signuppassword" 
+    
+                type="text" 
+    
+                class="form-control">
+    
+            <!--div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+    
+                <div *ngIf="f.email.errors.required">Email is required.</div>
+    
+                <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+    
+            </div-->
+    
+        </div>
+    
+        <br>
+        
+    
+        <div class="form-group">
+    
+            <label for="signuppasswordconfirm" style='font-size: 24px;' >Confirm Password</label>
+    
+            <input 
+    
+                formControlName="signuppasswordconfirm"
+    
+                id="signuppasswordconfirm" 
+    
+                type="text" 
+    
+                class="form-control">
+    
+            <!--div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+    
+                <div *ngIf="f.email.errors.required">Email is required.</div>
+    
+                <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+    
+            </div-->
+    
+        </div>
+      <br>
+    
+        <div class="signupsubmitCl">
+        <button (click)="susubmit()"  [disabled]="!form.valid" style='font-size: 24px;'>Submit</button>
+        
+    
+    </div>
+    </form>
